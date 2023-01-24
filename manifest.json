@@ -1,0 +1,25 @@
+{
+  "name": "What to pick to eat in restaurant£",
+  "action": {},
+  "manifest_version": 3,
+  "version": "0.1",
+  "description": "When you only can eat home",
+  "permissions": [
+    "activeTab",
+    "scripting"
+  ],
+  "icons": {
+    "16": "icon/icon-16.png",
+    "32": "icon/icon-32.png",
+    "48": "icon/icon-48.png",
+    "128": "icon/icon-128.png"
+  },
+  "content_scripts": [
+    {
+      "js": ["src/index.js"],
+      "matches": [
+        "https://e-h.sv-restaurant.ch/de/menuplan/sv-restaurant-flowtec/*"
+      ]
+    }
+  ]
+}
