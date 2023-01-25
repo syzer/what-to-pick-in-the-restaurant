@@ -3,7 +3,7 @@ const randomBetween = (min, max) =>
   Math.floor(Math.random() * (max - min + 1) + min)
 
 Array.from(document.querySelectorAll('.item-content'))
-  .filter((e, i) => i !== 2)
+  .filter((e, i) => ![2, 6, 10, 14, 18].includes(i))
   .map(e => e.outerHTML += `
 <svg width="250px" height="250px" stroke="red" fill="red" version="1.1" viewBox="0 0 250 250" 
   xmlns="http://www.w3.org/2000/svg"
