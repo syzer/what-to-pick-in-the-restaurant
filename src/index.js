@@ -5,17 +5,17 @@ const randomBetween = (min, max) =>
 document.querySelectorAll('.menu-description')
   .forEach(e => e.innerText += ' und Sriracha Sos.')
 
-Array.from(document.querySelectorAll('.item-content'))
+Array.from(document.querySelectorAll('.menu-description'))
   .filter((e, i) => ![2, 6, 10, 14, 18].includes(i))
   .map(e => e.outerHTML += `
-<svg width="250px" height="250px" stroke="red" fill="red" version="1.1" viewBox="0 0 250 250" 
+<svg width="250px" height="250px" stroke="red" fill="red" version="1.1" viewBox="0 0 250 250"
   xmlns="http://www.w3.org/2000/svg"
-  style="position: relative; z-index: 10; overflow: visible; top: -300px; left: -50px; transform: scale(0.8) rotate(${randomBetween(-25, 25)}deg);"
+  style="position: relative; z-index: 10; overflow: visible; top: -250px; left: -50px; transform: scale(0.8) rotate(${randomBetween(-25, 25)}deg);"
   data-clicked="4"
   onclick="
-    this.dataset.clicked -= 1; 
+    this.dataset.clicked -= 1;
     if (this.dataset.clicked < 0) {
-      this.remove(); 
+      this.remove();
       alert('Congratulations on becoming developer! Today is not the cheat day...')
     }"
   >
@@ -28,7 +28,7 @@ Array.from(document.querySelectorAll('.item-content'))
       from="0 250 250"
       to="5 250 250"
       dur="6s"
-      begin="0s; left.end" 
+      begin="0s; left.end"
       />
     <animateTransform
       id="left"
@@ -38,7 +38,7 @@ Array.from(document.querySelectorAll('.item-content'))
       from="5 250 250"
       to="0 250 250"
       dur="6s"
-      begin="right.end" 
+      begin="right.end"
       />
   </path>
 </svg>`)
